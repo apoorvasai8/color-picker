@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: antiquewhite;
+}
+button {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+p {
+  font-size: 18px;
+}
+p span {
+  font-weight: bold;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

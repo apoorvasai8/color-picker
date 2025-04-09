@@ -4,39 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color picker</title>
-    <style>
-      body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .container {
-        display: flex;
-        height: 300px;
-        width: 300px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        background-color: antiquewhite;
-      }
-      button {
-        padding: 10px 20px;
-        font-weight: bold;
-      }
-      p {
-        font-size: 18px;
-      }
-      p span {
-        font-weight: bold;
-      }
-      .con {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css"></link>
   </head>
   <body>
     <div class="container">
@@ -55,28 +23,6 @@
         </div>
       </div>
     </div>
-    <script>
-      let input = document.getElementById("color-input");
-      let getColorButton = document.getElementById("button");
-      getColorButton.addEventListener("click", function (event) {
-        document.getElementById("hexspan").textContent = input.value;
-
-        function hexToRgb(hex) {
-          // Remove the hash at the start if it's there
-          hex = hex.replace(/^#/, "");
-
-          // Parse the r, g, b values
-          let bigint = parseInt(hex, 16);
-          let r = (bigint >> 16) & 255;
-          let g = (bigint >> 8) & 255;
-          let b = bigint & 255;
-
-          return `rgb(${r}, ${g}, ${b})`;
-        }
-        document.getElementById("rgbspan").textContent = hexToRgb(input.value);
-
-        document.body.style.background = input.value;
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
